@@ -11,8 +11,9 @@ jobs:
         runs-on: windows-latest
         steps:
             - uses: actions/checkout@v2
-            - run: nuget restore App1.sln
-            - run: "msbuild App1/App1.Android/App1.Android.csproj"
+            - run: nuget restore
+            - run: msbuild
+              working-directory: App1/App1.Android
             # - name: Setup NuGet.exe
             #   uses: NuGet/setup-nuget@v1.0.2
             #   with:
