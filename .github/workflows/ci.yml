@@ -1,0 +1,19 @@
+name: CI
+
+on:
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
+
+jobs:
+    Android:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - run: nuget restore
+            - run: msbuild
+            # - name: Setup NuGet.exe
+            #   uses: NuGet/setup-nuget@v1.0.2
+            #   with:
+            #       nuget-version: "5.x"
