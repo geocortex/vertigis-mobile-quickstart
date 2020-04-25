@@ -11,7 +11,7 @@ jobs:
         runs-on: windows-latest
         steps:
             - uses: actions/checkout@v2
-            - run: nuget restore
+            - run: msbuild -t:restore
             - run: msbuild
               working-directory: App1/App1.Android
             # - name: Setup NuGet.exe
@@ -26,6 +26,6 @@ jobs:
               uses: maxim-lobanov/setup-xamarin@v1.1
               with:
                   xcode-version: latest
-            - run: nuget restore
+            - run: msbuild -t:restore
             - run: msbuild
               working-directory: App1/App1.iOS
