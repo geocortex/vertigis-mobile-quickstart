@@ -22,6 +22,10 @@ jobs:
         runs-on: macos-latest
         steps:
             - uses: actions/checkout@v2
+            - name: Use latest Xcode
+              uses: maxim-lobanov/setup-xamarin@v1.1
+              with:
+                  xcode-version: latest
             - run: nuget restore
             - run: msbuild
               working-directory: App1/App1.iOS
