@@ -16,7 +16,6 @@ jobs:
               with:
                   nuget-version: "5.x"
             - run: nuget restore
-              working-directory: App1/App1.Android
             - run: msbuild
               working-directory: App1/App1.Android
     iOS:
@@ -28,7 +27,7 @@ jobs:
               uses: maxim-lobanov/setup-xamarin@v1.1
               with:
                   xcode-version: latest
-            - run: nuget restore
+            - run: msbuild -t:restore
               working-directory: App1/App1.iOS
             - run: msbuild
               working-directory: App1/App1.iOS
