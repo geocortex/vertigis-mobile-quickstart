@@ -12,15 +12,12 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Setup NuGet
-              uses: NuGet/setup-nuget@v1.0.2
-              with:
-                  nuget-version: "5.x"
-
             - name: Setup msbuild
               uses: microsoft/setup-msbuild@v1
 
-            - run: nuget restore
+            - name: Restore NuGet packages
+              run: msbuild -t:restore
+              working-directory: App1/App1.Android
 
             - run: msbuild
               working-directory: App1/App1.Android
@@ -35,8 +32,23 @@ jobs:
               with:
                   xcode-version: latest
 
-            - run: msbuild -t:restore
+            - name: Restore NuGet packages
+              run: msbuild -t:restore
               working-directory: App1/App1.iOS
 
             - run: msbuild
               working-directory: App1/App1.iOS
+    Windows:
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Setup msbuild
+              uses: microsoft/setup-msbuild@v1
+
+            - name: Restore NuGet packages
+              run: msbuild -t:restore
+              working-directory: App1/App1.UWP
+
+            - run: msbuild
+              working-directory: App1/App1.UWP
