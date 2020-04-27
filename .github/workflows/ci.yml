@@ -11,20 +11,21 @@ jobs:
         runs-on: windows-latest
         steps:
             - uses: actions/checkout@v2
+            - name: Setup NuGet.exe
+              uses: NuGet/setup-nuget@v1
+              with:
+                  nuget-version: "5.x"
             - run: msbuild -t:restore
               working-directory: App1/App1.Android
             - run: msbuild
               working-directory: App1/App1.Android
-            # - name: Setup NuGet.exe
-            #   uses: NuGet/setup-nuget@v1.0.2
-            #   with:
-            #       nuget-version: "5.x"
     iOS:
         runs-on: macos-latest
         steps:
             - uses: actions/checkout@v2
+            # Fixes error when using newer NuGet packages that require a minimum version of Xcode
             - name: Use latest Xcode
-              uses: maxim-lobanov/setup-xamarin@v1.1
+              uses: maxim-lobanov/setup-xamarin@v1
               with:
                   xcode-version: latest
             - run: msbuild -t:restore
