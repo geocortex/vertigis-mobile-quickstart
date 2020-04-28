@@ -20,7 +20,7 @@ jobs:
               working-directory: App1/App1.Android
 
             - name: msbuild
-              run: msbuild -warnAsError
+              run: msbuild -warnAsError -verbosity:detailed
               working-directory: App1/App1.Android
     iOS:
         runs-on: macos-latest
@@ -38,7 +38,7 @@ jobs:
               working-directory: App1/App1.iOS
 
             - name: msbuild
-              run: msbuild -warnAsError
+              run: msbuild -warnAsError -verbosity:detailed
               working-directory: App1/App1.iOS
     Windows:
         runs-on: windows-latest
