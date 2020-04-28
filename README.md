@@ -8,4 +8,4 @@ A Geocortex Mobile app template to facilitate getting started with the Geocortex
 - Build and run.
 
 ## Documentation
-- Find [further documentation on the quickstart](https://developers.geocortex.com/docs/mobile/quick-start/) on the [Geocortex Development Center](https://developers.geocortex.com/docs/mobile/overview).
+- Find [further documentation on the quickstart](https://developers.geocortex.com/docs/mobile/sdk-quick-start/) on the [Geocortex Development Center](https://developers.geocortex.com/docs/mobile/overview).
