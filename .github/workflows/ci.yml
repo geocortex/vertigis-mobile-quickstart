@@ -1,0 +1,59 @@
+name: CI
+
+on:
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
+
+jobs:
+    Android:
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Setup msbuild
+              uses: microsoft/setup-msbuild@v1
+
+            - name: Restore NuGet packages
+              run: msbuild -t:restore
+              working-directory: App1/App1.Android
+
+            - name: msbuild
+              # TODO: Enable `-warnAsError` flag once package conflicts are resolved.
+              run: msbuild
+              working-directory: App1/App1.Android
+    iOS:
+        runs-on: macos-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            # Fixes error when using newer NuGet packages that require a minimum version of Xcode
+            - name: Use latest Xcode
+              uses: maxim-lobanov/setup-xamarin@v1.1
+              with:
+                  xcode-version: latest
+
+            - name: Restore NuGet packages
+              run: msbuild -t:restore
+              working-directory: App1/App1.iOS
+
+            - name: msbuild
+              # TODO: Enable `-warnAsError` flag once package conflicts are resolved.
+              run: msbuild
+              working-directory: App1/App1.iOS
+    Windows:
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Setup msbuild
+              uses: microsoft/setup-msbuild@v1
+
+            - name: Restore NuGet packages
+              run: msbuild -t:restore
+              working-directory: App1/App1.UWP
+
+            - name: msbuild
+              run: msbuild -warnAsError
+              working-directory: App1/App1.UWP
