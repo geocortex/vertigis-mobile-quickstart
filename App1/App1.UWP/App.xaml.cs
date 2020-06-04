@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Reflection;
-using Geocortex.Mobile.Platform;
+using VertiGIS.Mobile.Platform;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
