@@ -8,8 +8,8 @@
     <PackageReference Include="Esri.ArcGISRuntime" Version="100.7.0" />
     <PackageReference Include="Esri.ArcGISRuntime.Toolkit.Xamarin.Forms" Version="100.7.1" />
     <PackageReference Include="Esri.ArcGISRuntime.Xamarin.Forms" Version="100.7.0" />
-    <PackageReference Include="Geocortex.Workflow.Forms" Version="5.15.3.342" />
-    <PackageReference Include="VertiGIS.Mobile" Version="5.7.0-PullRequest12031.1" />
+    <PackageReference Include="Geocortex.Workflow.Forms" Version="5.15.3.365" />
+    <PackageReference Include="VertiGIS.Mobile" Version="5.7.0-PullRequest12031.15" />
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.617" />
   </ItemGroup>
 
