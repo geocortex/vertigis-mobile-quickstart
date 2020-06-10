@@ -1,11 +1,11 @@
 ﻿using Foundation;
-using Geocortex.Mobile;
-using Geocortex.Mobile.Composition.Logging;
-using Geocortex.Mobile.Infrastructure.App;
-using Geocortex.Mobile.Infrastructure.Configuration;
-using Geocortex.Mobile.Infrastructure.Platform;
-using Geocortex.Mobile.Platform;
-using Geocortex.Mobile.Utilities;
+using VertiGIS.Mobile;
+using VertiGIS.Mobile.Composition.Logging;
+using VertiGIS.Mobile.Infrastructure.App;
+using VertiGIS.Mobile.Infrastructure.Configuration;
+using VertiGIS.Mobile.Infrastructure.Platform;
+using VertiGIS.Mobile.Platform;
+using VertiGIS.Mobile.Utilities;
 using System;
 using System.Diagnostics;
 using System.Globalization;
@@ -18,10 +18,8 @@ namespace App1.iOS
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : GeocortexAppDelegate
+    public partial class AppDelegate : VertiGISAppDelegate
     {
-        private Geocortex.Mobile.App _viewerApp;
-
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -34,12 +32,8 @@ namespace App1.iOS
             HandleExceptions();
             IOSInitializer.Init();
             Forms.Init();
-
             var viewerApp = new App();
-            _viewerApp = viewerApp;
-
             LoadApplication(viewerApp);
-
             return base.FinishedLaunching(app, options);
         }
 

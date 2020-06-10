@@ -2,8 +2,8 @@
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
-using Geocortex.Mobile;
-using Geocortex.Mobile.Platform;
+using VertiGIS.Mobile;
+using VertiGIS.Mobile.Platform;
 using Java.Lang;
 using Xamarin.Forms;
 using static Java.Lang.Thread;
@@ -11,7 +11,7 @@ using static Java.Lang.Thread;
 namespace App1.Droid
 {
     [Activity(Name = "app1.mainactivity", Label = "App1", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : GeocortexMobileActivity, IUncaughtExceptionHandler
+    public class MainActivity : VertiGISMobileActivity, IUncaughtExceptionHandler
     {
         protected override void OnCreate(Bundle bundle)
         {

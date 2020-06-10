@@ -1,6 +1,6 @@
-﻿using Geocortex.Mobile;
-using Geocortex.Mobile.Infrastructure.Configuration;
-using Geocortex.Mobile.Infrastructure.UI;
+﻿using VertiGIS.Mobile;
+using VertiGIS.Mobile.Infrastructure.Configuration;
+using VertiGIS.Mobile.Infrastructure.UI;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,12 +9,11 @@ using static Xamarin.Forms.Device;
 
 namespace App1
 {
-    public class App : Geocortex.Mobile.App
+    public class App : VertiGIS.Mobile.App
     {
-        public App()
-            : base(new Uri("resource://app.json"))
+        public App() : base()
         {
-            // Add the styles from this page to the application - overrides styles from Geocortex.Mobile
+            // Add the styles from this page to the application - overrides styles from VertiGIS.Mobile
             var res = new Styles().Resources;
             this.Resources.MergedDictionaries.Add(res);
 

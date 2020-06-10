@@ -342,8 +342,14 @@ healthchecksdb
 # Geocortex ViewerFramework
 /ViewerFramework
 
+# VertiGIS ViewerSpec
+/ViewerSpec
+
 # Geocortex.Mobile Image assets
 /**/Resources/Icons.xcassets/**/*.*
 
 # Geocortex.Icons Image assets
 /**/Resources/GcxMobileIcons.xcassets/**/*.*
+
+Android Resources.designer.cs
+/**/Resources/Resource.designer.cs
