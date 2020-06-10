@@ -350,4 +350,6 @@ healthchecksdb
 
 # Geocortex.Icons Image assets
 /**/Resources/GcxMobileIcons.xcassets/**/*.*
-/App1/App1.Android/Resources/Resource.designer.cs
+
+Android Resources.designer.cs
+/**/Resources/Resource.designer.cs
