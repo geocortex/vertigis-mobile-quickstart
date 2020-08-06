@@ -2,10 +2,7 @@
 using VertiGIS.Mobile.Infrastructure.Configuration;
 using VertiGIS.Mobile.Infrastructure.UI;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
-using static Xamarin.Forms.Device;
 
 namespace App1
 {

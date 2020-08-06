@@ -4,7 +4,6 @@ using VertiGIS.Mobile.Platform;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Navigation;
 
 namespace App1.UWP
 {

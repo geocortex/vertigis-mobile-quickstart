@@ -1,15 +1,7 @@
 ﻿using Foundation;
-using VertiGIS.Mobile;
-using VertiGIS.Mobile.Composition.Logging;
-using VertiGIS.Mobile.Infrastructure.App;
-using VertiGIS.Mobile.Infrastructure.Configuration;
-using VertiGIS.Mobile.Infrastructure.Platform;
-using VertiGIS.Mobile.Platform;
-using VertiGIS.Mobile.Utilities;
-using System;
-using System.Diagnostics;
-using System.Globalization;
 using UIKit;
+using VertiGIS.Mobile;
+using VertiGIS.Mobile.Platform;
 using Xamarin.Forms;
 
 namespace App1.iOS
