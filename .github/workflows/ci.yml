@@ -57,5 +57,5 @@ jobs:
             - name: msbuild
               # TODO: Enable `-warnAsError` flag once XF is updated, and warnings aren't shown:
               # https://developercommunity.visualstudio.com/content/problem/1251681/xamarinforms-application-warning.html
-              run: msbuild -warnAsError
+              run: msbuild
               working-directory: App1/App1.UWP
