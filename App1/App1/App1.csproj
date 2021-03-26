@@ -5,10 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Esri.ArcGISRuntime" Version="100.9.0" />
-    <PackageReference Include="Esri.ArcGISRuntime.Xamarin.Forms" Version="100.9.0" />
-    <PackageReference Include="VertiGIS.Mobile" Version="5.11.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1239" />
+    <PackageReference Include="Esri.ArcGISRuntime" Version="100.10.0" />
+    <PackageReference Include="Esri.ArcGISRuntime.Xamarin.Forms" Version="100.10.0" />
+    <PackageReference Include="VertiGIS.Mobile" Version="5.10.1-PullRequest14567.105" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1931" />
   </ItemGroup>
 
   <ItemGroup>
