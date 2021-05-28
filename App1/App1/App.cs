@@ -1,6 +1,6 @@
 ﻿using VertiGIS.Mobile;
 using VertiGIS.Mobile.Infrastructure.Configuration;
-using VertiGIS.Mobile.Infrastructure.UI;
+using VertiGIS.Mobile.Toolkit.Views;
 using System;
 using Xamarin.Forms;
 
