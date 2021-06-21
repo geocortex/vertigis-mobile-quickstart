@@ -61,7 +61,7 @@
       "id": "workflow",
       "title": "Hydrant Inspection",
       "target": "#taskbar",
-      "portalItem": "725c71a8a4e7456faa6ca12e48ffe73a"
+      "portalItem": "1dfbdba7cd9b4453a8313cd9de0d1a70"
     },
     {
       "$type": "select-layer-settings",
@@ -126,120 +126,19 @@
     {
       "$type": "map-extension",
       "id": "map1",
-      "webMap": "c6008288a95247428fc55d9aaa72b670",
+      "webMap": "c27fa8668647489482dd418b0d765aec",
       "onClick": [ "tasks.identify", "highlights.pulse", "results.display" ]
-    },
-    {
-      "$type": "menu-item",
-      "id": "rotateMapAction",
-      "title": "Rotate Map",
-      "isEnabled": true,
-      "action": [
-        {
-          "name": "panel.snap-host-panel",
-          "arguments": {
-            "snapPosition": "middle"
-          }
-        },
-        {
-          "name": "map.rotate-by",
-          "arguments": {
-            "rotation": 45,
-            "maps": "item://map-extension/map1"
-          }
-        }
-      ]
-    },
-    {
-      "$type": "menu-item",
-      "id": "addPointAtCenterAction",
-      "title": "Add Measurement Point at Center",
-      "action": [
-        {
-          "name": "sketching.add-point-at-center",
-          "arguments": {
-            "maps": "item://map-extension/map1"
-          }
-        }
-      ]
-    },
-    {
-      "$type": "menu-item",
-      "id": "addPointAtCurrentLocationAction",
-      "title": "Add Measurement Point at Current Location",
-      "action": [
-        {
-          "name": "sketching.add-point-at-current-location",
-          "arguments": {
-            "maps": "item://map-extension/map1"
-          }
-        }
-      ]
-    },
-    {
-      "$type": "menu-item",
-      "id": "setInteractionModeCenterCrosshair",
-      "title": "Set Interaction Mode: CenterCrosshair",
-      "action": [
-        {
-          "name": "sketching.set-interaction-mode",
-          "arguments": {
-            "maps": "item://map-extension/map1",
-            "editorInteractionMode": "CenterCrosshair"
-          }
-        }
-      ]
-    },
-    {
-      "$type": "menu-item",
-      "id": "setInteractionModeFreehand",
-      "title": "Set Interaction Mode: Freehand",
-      "action": [
-        {
-          "name": "sketching.set-interaction-mode",
-          "arguments": {
-            "maps": "item://map-extension/map1",
-            "editorInteractionMode": "Freehand"
-          }
-        }
-      ]
-    },
-    {
-      "$type": "menu-item",
-      "id": "zoomToViewpointAction",
-      "title": "Zoom To Viewpoint",
-      "isEnabled": true,
-      "action": [
-        {
-          "name": "panel.snap-host-panel",
-          "arguments": {
-            "snapPosition": "middle"
-          }
-        },
-        {
-          "name": "map.zoom-to-viewpoint",
-          "arguments": {
-            "viewpoint": {
-              "targetGeometry": {
-                "xmin": "-13134178.43",
-                "ymin": "4034708.1906000003",
-                "xmax": "-13194178.43",
-                "ymax": "4041708.1906000003",
-                "spatialReference": {
-                  "wkid": 102100,
-                  "latestWkid": 3857
-                }
-              }
-            },
-            "maps": "item://map-extension/map1"
-          }
-        }
-      ]
     },
     {
       "$type": "menu",
       "id": "iwtm",
       "items": [
+        {
+          "title": "Refresh App",
+          "isEnabled": true,
+          "iconId": "sync",
+          "action": "app.refresh"
+        },
         {
           "title": "Return to Default Map View",
           "isEnabled": true,
