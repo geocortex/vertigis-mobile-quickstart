@@ -10,10 +10,13 @@
     <map id="page1-map1" config="map1" slot="main">
       <gxm:geometry-toolbar slot="top-center-visible" id="geometry-toolbar" config="geometry" margin="0.8" style="round" active="false" />
       <search-new-extent config="search" margin="0.8" slot="top-center-visible" active="false" />
-      <stack margin="0.8" slot="top-right" halign="end">
-        <iwtm config="iwtm" id="IWTM">
+      <stack margin="0.5" slot="top-right" halign="end">
+        <iwtm config="iwtm" margin="0.3" id="IWTM">
           <user slot="bottom"/>
         </iwtm>
+        <expand margin="0.3" style="round">
+          <bookmarks/>
+        </expand>
       </stack>
       <stack margin="0.5" slot="bottom-right" halign="end">
         <compass id="compass" margin="0.5"/>

@@ -20,10 +20,13 @@
           <basemap-picker/>
         </expand>
       </stack>
-      <stack margin="0.8" slot="top-right" halign="end">
-        <iwtm config="iwtm" id="IWTM">
+      <stack margin="0.5" slot="top-right" halign="end">
+        <iwtm config="iwtm" margin="0.3" id="IWTM">
           <user slot="bottom"/>
         </iwtm>
+        <expand margin="0.3" style="round">
+          <bookmarks/>
+        </expand>
       </stack>
       <stack margin="0.5" slot="bottom-left" halign="start">
         <split valign="center">
