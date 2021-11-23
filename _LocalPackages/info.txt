@@ -1,1 +1,0 @@
-StringInterpolation code analysis package from https://github.com/FrankBakkerNl/StringInterpolationAnalyzer

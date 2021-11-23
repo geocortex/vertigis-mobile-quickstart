@@ -16,7 +16,7 @@ jobs:
               uses: microsoft/setup-msbuild@v1
 
             - name: Restore NuGet packages
-              run: msbuild -t:restore -p:RestoreConfigFile=..\..\nuget.config
+              run: msbuild -t:restore
               working-directory: App1/App1.Android
 
             - name: msbuild
@@ -35,7 +35,7 @@ jobs:
                   xcode-version: 12.x
 
             - name: Restore NuGet packages
-              run: msbuild -t:restore -p:RestoreConfigFile=..\..\nuget.config
+              run: msbuild -t:restore
               working-directory: App1/App1.iOS
 
             - name: msbuild
@@ -51,7 +51,7 @@ jobs:
               uses: microsoft/setup-msbuild@v1
 
             - name: Restore NuGet packages
-              run: msbuild -t:restore -p:RestoreConfigFile=..\..\nuget.config
+              run: msbuild -t:restore
               working-directory: App1/App1.UWP
 
             - name: msbuild
