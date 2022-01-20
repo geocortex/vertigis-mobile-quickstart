@@ -41,7 +41,7 @@ namespace App1.UWP
         {
             /* Call any 3rd party library Init methods here */
 
-            // Handle Geocortex Mobile startup parameters
+            // Handle VertiGIS Studio Mobile startup parameters
             // Need to add a uri schema declaration in the Package.appxmanifest, then uncomment code below
             // Pass in any 'extra' assemblies, that will be passed along to a Xamarin.Forms Init() call
             // WindowsAppHandlers.HandleOnActivated(args, typeof(MainPage), Array.Empty<Assembly>());
