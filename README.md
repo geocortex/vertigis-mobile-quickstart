@@ -1,8 +1,8 @@
-# Geocortex Mobile Quickstart
+# VertiGIS Studio Mobile Quickstart
 
 ![CI](https://github.com/geocortex/vertigis-mobile-quickstart/workflows/CI/badge.svg)
 
-A Geocortex Mobile app template to facilitate getting started with the Geocortex Mobile SDK and custom development.
+A VertiGIS Studio Mobile app template to facilitate getting started with the VertiGIS Studio Mobile SDK and custom development.
 
 ## The Quickstart
 
@@ -13,4 +13,4 @@ A Geocortex Mobile app template to facilitate getting started with the Geocortex
 
 ## Documentation
 
-Find [further documentation on the quickstart](https://developers.geocortex.com/docs/mobile/sdk-quickstart-reference/) on the [Geocortex Development Center](https://developers.geocortex.com/docs/mobile/overview).
+Find [further documentation on the quickstart](https://developers.geocortex.com/docs/mobile/sdk-quickstart-reference/) on the [VertiGIS Studio Development Center](https://developers.geocortex.com/docs/mobile/overview).
