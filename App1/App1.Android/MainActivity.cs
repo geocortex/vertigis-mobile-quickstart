@@ -40,7 +40,7 @@ namespace App1.Droid
 
         protected override void OnNewIntent(Intent intent)
         {
-            // Handle Geocortex Mobile startup parameters
+            // Handle VertiGIS Studio Mobile startup parameters
             // Need to add an intent-filter in AndroidManifest.xml, then uncomment code below
             // HandleNewIntent(intent);
         }
