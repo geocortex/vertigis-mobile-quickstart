@@ -8,7 +8,7 @@
     <PackageReference Include="Esri.ArcGISRuntime" Version="100.13.0" />
     <PackageReference Include="Esri.ArcGISRuntime.Xamarin.Forms" Version="100.13.0" />
     <PackageReference Include="VertiGIS.ArcGISExtensions" Version="1.1.0.488" />
-    <PackageReference Include="VertiGIS.Mobile" Version="5.17.0-PullRequest2415.312" />
+    <PackageReference Include="VertiGIS.Mobile" Version="5.17.0-PullRequest2415.334" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
   </ItemGroup>
 
