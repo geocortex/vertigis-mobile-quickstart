@@ -21,7 +21,19 @@ namespace App1.UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            this.LeavingBackground += App_LeavingBackground;
+            this.EnteredBackground += App_EnteredBackground;
             WindowsAppHandlers.HandleExceptions(this);
+        }
+
+        private void App_LeavingBackground(object sender, LeavingBackgroundEventArgs e)
+        {
+            VertiGIS.Mobile.App.Instance?.OnActivated();
+        }
+
+        private void App_EnteredBackground(object sender, EnteredBackgroundEventArgs e)
+        {
+            VertiGIS.Mobile.App.Instance?.OnBackgrounded();
         }
 
         /// <summary>
