@@ -21,19 +21,8 @@ namespace App1.UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            this.LeavingBackground += App_LeavingBackground;
-            this.EnteredBackground += App_EnteredBackground;
+            WindowsAppHandlers.InitializeBackgrounding(this);
             WindowsAppHandlers.HandleExceptions(this);
-        }
-
-        private void App_LeavingBackground(object sender, LeavingBackgroundEventArgs e)
-        {
-            VertiGIS.Mobile.App.Instance?.OnActivated();
-        }
-
-        private void App_EnteredBackground(object sender, EnteredBackgroundEventArgs e)
-        {
-            VertiGIS.Mobile.App.Instance?.OnBackgrounded();
         }
 
         /// <summary>
@@ -57,6 +46,13 @@ namespace App1.UWP
             // Need to add a uri schema declaration in the Package.appxmanifest, then uncomment code below
             // Pass in any 'extra' assemblies, that will be passed along to a Xamarin.Forms Init() call
             // WindowsAppHandlers.HandleOnActivated(args, typeof(MainPage), Array.Empty<Assembly>());
+        }
+
+        protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
+        {
+            base.OnBackgroundActivated(args);
+
+            WindowsAppHandlers.HandleOnBackgroundActivated(args);
         }
 
         /// <summary>
