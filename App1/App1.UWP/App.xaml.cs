@@ -21,6 +21,7 @@ namespace App1.UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            WindowsAppHandlers.InitializeBackgrounding(this);
             WindowsAppHandlers.HandleExceptions(this);
         }
 
@@ -45,6 +46,13 @@ namespace App1.UWP
             // Need to add a uri schema declaration in the Package.appxmanifest, then uncomment code below
             // Pass in any 'extra' assemblies, that will be passed along to a Xamarin.Forms Init() call
             // WindowsAppHandlers.HandleOnActivated(args, typeof(MainPage), Array.Empty<Assembly>());
+        }
+
+        protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
+        {
+            base.OnBackgroundActivated(args);
+
+            WindowsAppHandlers.HandleOnBackgroundActivated(args);
         }
 
         /// <summary>
