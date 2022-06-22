@@ -34,8 +34,13 @@ jobs:
               with:
                   xcode-version: 13.x
 
-            - name: Setup msbuild
-              uses: microsoft/setup-msbuild@v1
+            - name: Restore Workaround Remove
+              run: rm -rf ~/.config/NuGet/NuGet.Config
+              shell: bash
+
+            - name: Restore Workaround List
+              run: dotnet nuget list source
+              shell: bash
 
             - name: Restore NuGet packages
               run: msbuild -t:restore
