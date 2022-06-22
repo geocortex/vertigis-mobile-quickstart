@@ -34,6 +34,9 @@ jobs:
               with:
                   xcode-version: 13.x
 
+            - name: Setup msbuild
+              uses: microsoft/setup-msbuild@v1
+
             - name: Restore NuGet packages
               run: msbuild -t:restore
               working-directory: App1/App1.iOS
