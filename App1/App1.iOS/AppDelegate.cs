@@ -28,6 +28,11 @@ namespace App1.iOS
             Forms.Init();
             var viewerApp = new App();
             _viewerApp = viewerApp;
+
+            // Handle startup urls
+            // See below comment in OpenUrl, then uncomment the code below
+            // SetLaunchUrl(viewerApp, options);
+
             LoadApplication(viewerApp);
             return base.FinishedLaunching(app, options);
         }
