@@ -12,6 +12,8 @@ namespace App1.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : VertiGISAppDelegate
     {
+        private App _viewerApp;
+
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -25,6 +27,12 @@ namespace App1.iOS
             IOSInitializer.Init();
             Forms.Init();
             var viewerApp = new App();
+            _viewerApp = viewerApp;
+
+            // Handle startup urls
+            // See below comment in OpenUrl, then uncomment the code below
+            // SetLaunchUrl(viewerApp, options);
+
             LoadApplication(viewerApp);
             return base.FinishedLaunching(app, options);
         }
