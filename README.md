@@ -1,3 +1,5 @@
+> :warning: This project has moved to https://github.com/vertigis/vertigis-mobile-quickstart
+
 # VertiGIS Studio Mobile Quickstart
 
 ![CI](https://github.com/geocortex/vertigis-mobile-quickstart/workflows/CI/badge.svg)
